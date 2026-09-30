@@ -1,0 +1,148 @@
+/* --- FONTS --- */
+@font-face {
+    font-family: 'PacoFont';
+    src: url('assets/PacoFont19.ttf') format('truetype'); 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* --- BACKGROUND & LAYOUT --- */
+.bg-container {
+    background-image: url('assets/speaker-bg.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-color: #111;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-ui-wrapper {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.6);
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- THE STICKER FIX --- */
+.sticker-wrapper {
+    position: relative;
+    width: 85%;
+    margin-bottom: 40px;
+    transform: rotate(-3deg);
+}
+
+.sticker-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.paco-text {
+    position: absolute;
+    top: 58%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'PacoFont', sans-serif;
+    font-size: clamp(2rem, 10vw, 3.2rem); /* Slightly reduced the max size to pull the 'Y' inward */
+    color: #000;
+    text-align: center;
+    line-height: 0.8;
+    letter-spacing: -12px; /* Pulled much tighter for the connected tag look */
+    width: 90%;
+}
+
+/* --- FORM & UI ELEMENTS --- */
+.waitlist-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ui-label {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.pitch-box {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.pitch-box p {
+    color: #aaa;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.input-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ui-input {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px;
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+}
+
+.ui-input:focus {
+    border-color: #666;
+}
+
+.ui-btn {
+    background: #e6e6e6;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.ui-btn:active {
+    background: #fff;
+    transform: scale(0.98);
+}
+
+/* --- FOOTER --- */
+.footer-logo {
+    margin-top: auto;
+    padding-top: 40px;
+}
+
+.studio-logo-text {
+    font-family: 'PacoFont', sans-serif;
+    font-size: 1.8rem;
+    color: #fff;
+    opacity: 0.7;
+    text-align: center;
+    font-weight: normal; 
+    letter-spacing: -6px; /* Applied proportional negative spacing to the footer logo */
+}
